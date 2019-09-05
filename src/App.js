@@ -1,18 +1,12 @@
 import React from 'react';
 import './App.css';
-import Nabvar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
 
 function App() {
   return (
-      <div>
-    <Nabvar/>
-    <div className="container">
-        <div className="row-justify-center">
-            <p>
-            Hello Mundo!
-            </p>
-        </div>
-    </div>
+    <div>
+        <Home/>
+
     </div>
   );
 }
