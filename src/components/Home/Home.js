@@ -19,6 +19,13 @@ function Home() {
         </section>
         <div className="album py-5 bg-light">
             <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
         </div>
       </div>
   );
