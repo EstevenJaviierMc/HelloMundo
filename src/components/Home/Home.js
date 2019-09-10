@@ -9,7 +9,7 @@ function Home() {
         <Nabvar/>
         <section class="jumbotron text-center">
             <div class="container">
-            <h1 class="jumbotron-heading">Album example</h1>
+            <h1 class="jumbotron-heading">Belleza Tropical!!!!!</h1>
             <p class="lead text-muted">In this page you can public the Posts about the topic whatever, only in the cours that you be suscrito!</p>
             <p>
                 <a href="#" class="btn btn-primary my-2">Main call to action</a>
