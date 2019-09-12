@@ -19,7 +19,7 @@ render(){
 return (
     <div className="container">
         <div className="row">
-           fotos.map((foto) => 
+         {  fotos.map((foto) => 
      <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                     <img className="bd-placeholder-img card-img-top" width="100%" height="225" src={foto.url} alt="fdgdfg"/>
@@ -36,7 +36,7 @@ return (
                 </div>
             </div>
 
-)
+)}
         </div>
 
 
