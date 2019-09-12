@@ -7,7 +7,7 @@ super(props);
 this.state = { fotos:[] };
 }
 componentWillMount(){
-  fetch('http://taller-angular.carlosazaustre.es/empleados')
+  fetch('https://jsonplaceholder.typicode.com/photos')
       .then((response) => {
         return response.json()
       })
@@ -20,11 +20,12 @@ componentWillMount(){
 return (
     <div className="container">
         <div className="row">
-            <div className="col-md-4">
+           fotos.map((foto) => {
+     <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
-                    <img className="bd-placeholder-img card-img-top" width="100%" height="225" src={img} alt="fdgdfg"/>
+                    <img className="bd-placeholder-img card-img-top" width="100%" height="225" src=foto.url alt="fdgdfg"/>
                     <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p className="card-text">foto.tittle</p>
                     <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                         <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
@@ -35,6 +36,9 @@ return (
                     </div>
                 </div>
             </div>
+
+
+}
         </div>
 
 
