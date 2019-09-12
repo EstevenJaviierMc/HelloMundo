@@ -20,12 +20,12 @@ componentWillMount(){
 return (
     <div className="container">
         <div className="row">
-           fotos.map((foto) => {
+           fotos.map((foto) => 
      <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
-                    <img className="bd-placeholder-img card-img-top" width="100%" height="225" src=foto.url alt="fdgdfg"/>
+                    <img className="bd-placeholder-img card-img-top" width="100%" height="225" src={foto.url} alt="fdgdfg"/>
                     <div className="card-body">
-                    <p className="card-text">foto.tittle</p>
+                    <p className="card-text">{foto.tittle}</p>
                     <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                         <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
@@ -37,8 +37,7 @@ return (
                 </div>
             </div>
 
-
-}
+);
         </div>
 
 
