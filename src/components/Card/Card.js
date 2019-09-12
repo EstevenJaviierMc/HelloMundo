@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {component} from 'react';
 
-function Card() {
+class Card extends component{
     const img = 'https://scontent-bog1-1.xx.fbcdn.net/v/t1.0-9/42600689_1257222957753118_8355322505967173632_n.jpg?_nc_cat=100&_nc_oc=AQmjkQWvRxeFnpDCRqA4VD075AKwjebcN0YHzFpOyMyYnst7hC-HKo7HFdGZyeFggfM&_nc_ht=scontent-bog1-1.xx&oh=111cc1d95efd6c6c3a8adc9ab21a000a&oe=5DF414E8';
   constructor(props){
 super(props);
@@ -16,7 +16,7 @@ componentWillMount(){
       })
 
 }
-
+render(){
 return (
     <div className="container">
         <div className="row">
@@ -42,7 +42,7 @@ return (
 
 
     </div>
-  );
+  )}
 }
 
 export default Card;
