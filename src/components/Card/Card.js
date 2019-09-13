@@ -2,7 +2,7 @@ import React, {component} from 'react';
 
 class Card extends component{
   constructor(props){
-super(props);
+super();
 this.state = { fotos:[] };
 }
 componentWillMount(){
