@@ -5,8 +5,8 @@ class Card extends Component{
 super(props);
 this.state = { fotos:[] };
 }
-componentWillMount(){
-  fetch('https://jsonplaceholder.typicode.com/photos')
+componentWillMount() async {
+  await fetch('https://jsonplaceholder.typicode.com/photos')
       .then((response) => {
         return response.json()
       })
