@@ -1,6 +1,6 @@
 import React, {Component,useState, useEffect } from 'react';
 import axios from 'axios';
-import Pagination from './Pagination';
+import Pagination from './../Pagination';
 class Card extends Component{
 
   const [posts, setPosts] = useState([]);
