@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,useState, useEffect } from 'react';
 import axios from 'axios';
 class Card extends Component{
 
@@ -53,7 +53,6 @@ return (
         </div>
 <div clases="row">
 <h1 className='text-primary mb-3'>My Blog</h1>
-      <Posts posts={currentPosts} loading={loading} />
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
