@@ -1,25 +1,38 @@
 import React, {Component} from 'react';
-
+import axios from 'axios';
 class Card extends Component{
-  constructor(props){
-super(props);
-this.state = { fotos:[] };
-}
-componentWillMount() {
-  fetch('https://jsonplaceholder.typicode.com/photos')
-      .then((response) => {
-        return response.json()
-      })
-      .then((fotos) => {
-        this.setState({ fotos: fotos })
-      })
+
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get('https://jsonplaceholder.typicode.com/photos');
+      setPosts(res.data);
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
 
 }
 render(){
 return (
     <div className="container">
         <div className="row">
-         {  this.state.fotos.map((foto) =>
+         {  posts.map((foto) =>
      <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                     <img className="bd-placeholder-img card-img-top" width="100%" height="225" src={foto.url} alt="fdgdfg"/>
